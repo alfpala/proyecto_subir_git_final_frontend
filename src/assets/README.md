@@ -1,0 +1,1 @@
+Coloca aquí tus imágenes, fuentes y otros recursos estáticos.
