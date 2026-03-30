@@ -40,13 +40,13 @@ const get = (p) => req("GET", p);
 const post = (p, b) => req("POST", p, b);
 
 export const dashboardAPI = {
-  get: () => get("/admin/dashboard"),
+  get: () => get("/api/admin/dashboard"),
 };
 
 export const ordersAPI = {
-  list: (p = {}) => get("/admin/orders?" + new URLSearchParams(p)),
-  get: (id) => get(`/admin/orders/${id}`),
-  updateStatus: (id, status) => req("PUT", `/admin/orders/${id}/status`, { status }),
+  list: (p = {}) => get("/api/admin/orders?" + new URLSearchParams(p)),
+  get: (id) => get(`/api/admin/orders/${id}`),
+  updateStatus: (id, status) => req("PUT", `/api/admin/orders/${id}/status`, { status }),
 };
 
 // API para autenticación de admin
@@ -56,33 +56,33 @@ export const authAPI = {
 
 // API para gestión de usuarios
 export const usersAPI = {
-  list: (p = {}) => get("/admin/users?" + new URLSearchParams(p)),
-  get: (id) => get(`/admin/users/${id}`),
-  create: (data) => post("/admin/users", data),
-  update: (id, data) => req("PUT", `/admin/users/${id}`, data),
-  delete: (id) => req("DELETE", `/admin/users/${id}`),
+  list: (p = {}) => get("/api/admin/users?" + new URLSearchParams(p)),
+  get: (id) => get(`/api/admin/users/${id}`),
+  create: (data) => post("/api/admin/users", data),
+  update: (id, data) => req("PUT", `/api/admin/users/${id}`, data),
+  delete: (id) => req("DELETE", `/api/admin/users/${id}`),
 };
 
 // API para gestión de categorías
 export const categoriesAPI = {
-  list: (p = {}) => get("/admin/categories?" + new URLSearchParams(p)),
-  get: (id) => get(`/admin/categories/${id}`),
-  create: (data) => post("/admin/categories", data),
-  update: (id, data) => req("PUT", `/admin/categories/${id}`, data),
-  delete: (id) => req("DELETE", `/admin/categories/${id}`),
+  list: (p = {}) => get("/api/admin/categories?" + new URLSearchParams(p)),
+  get: (id) => get(`/api/admin/categories/${id}`),
+  create: (data) => post("/api/admin/categories", data),
+  update: (id, data) => req("PUT", `/api/admin/categories/${id}`, data),
+  delete: (id) => req("DELETE", `/api/admin/categories/${id}`),
 };
 
 // API para gestión de favoritos
 export const favoritesAPI = {
-  list: (p = {}) => get("/admin/favorites?" + new URLSearchParams(p)),
-  delete: (id) => req("DELETE", `/admin/favorites/${id}`),
+  list: (p = {}) => get("/api/admin/favorites?" + new URLSearchParams(p)),
+  delete: (id) => req("DELETE", `/api/admin/favorites/${id}`),
 };
 
 // API para gestión de productos
 export const productsAPI = {
-  list: (p = {}) => get("/admin/products?" + new URLSearchParams(p)),
-  get: (id) => get(`/admin/products/${id}`),
-  create: (data) => post("/admin/products", data),
-  update: (id, data) => req("PUT", `/admin/products/${id}`, data),
-  delete: (id) => req("DELETE", `/admin/products/${id}`),
+  list: (p = {}) => get("/api/admin/products?" + new URLSearchParams(p)),
+  get: (id) => get(`/api/admin/products/${id}`),
+  create: (data) => post("/api/admin/products", data),
+  update: (id, data) => req("PUT", `/api/admin/products/${id}`, data),
+  delete: (id) => req("DELETE", `/api/admin/products/${id}`),
 };
