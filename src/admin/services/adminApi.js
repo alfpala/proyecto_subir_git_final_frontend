@@ -51,7 +51,7 @@ export const ordersAPI = {
 
 // API para autenticación de admin
 export const authAPI = {
-  login: (email, password) => post("/auth/login", { email, password }),
+  login: (email, password) => post("/api/auth/login", { email, password }),
 };
 
 // API para gestión de usuarios
