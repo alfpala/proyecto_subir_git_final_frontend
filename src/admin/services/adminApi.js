@@ -1,7 +1,7 @@
 // admin/services/adminApi.js
 import { getAdminToken } from "../context/adminAuth";
 
-const BASE = "https://proyecto-subir-git-final-backend.onrender.com/";
+const BASE = "https://proyecto-subir-git-final-backend.onrender.com";
 
 function headers() {
   return {
