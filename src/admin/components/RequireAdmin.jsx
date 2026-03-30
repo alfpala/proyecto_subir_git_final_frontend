@@ -4,7 +4,7 @@ import { isAdmin } from "../context/adminAuth";
 
 export default function RequireAdmin({ children }) {
   if (!isAdmin()) {
-    return <Navigate to="/admin/dashboard" replace />;
+    return <Navigate to="/admin/login" replace />;
   }
   return children;
 }
